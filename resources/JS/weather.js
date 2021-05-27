@@ -11,6 +11,7 @@ function getLocation() {
   function error(err){
 	  if(err.code ==1 ) {
 		  console.log("Denied");
+		  document.getElementById("tempF").innerHTML = "Please, approve geolocation"
 	  }
 	  else if (err.code == 2 ){
 		  console.log("Position is unavailable")
