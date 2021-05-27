@@ -10,8 +10,10 @@ function getLocation() {
   }
   function error(err){
 	  if(err.code ==1 ) {
+		  let tempDenied=document.getElementById("tempF")
 		  console.log("Denied");
-		  document.getElementById("tempF").innerHTML = "Please, approve geolocation"
+		  tempDenied.innerHTML = "Please, approve geolocation and reload the page";
+		  tempDenied.style.fontSize = "2vw";
 	  }
 	  else if (err.code == 2 ){
 		  console.log("Position is unavailable")
