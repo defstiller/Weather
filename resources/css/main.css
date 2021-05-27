@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    max-width:100%;
+    font-size: x-large;
+}
+html {
+    height: 100vh;
+    background-size: cover;
+}
+
+#backgroundFilter { /* START OF SIGN UP / SIGN IN */
+    display: none;
+}
+#signInDiv {
+    display: none;
+}
+#sign-in {
+    display: none;
+}
+#password-reset {
+    display: none;
+}
+#needReg {
+    display: none;
+}
+#user-details-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#sign-out {
+    font-size: large;  
+}
+#sign-out
+,#sign-in-status {
+    margin: 10px;
+}
+/* END OF SIGN UP / SIGN IN */
+
+
+#backgroundFilter { /* INVISIBLE BACKGROUND FOR SIGN UP / SIGN IN */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+
+}
+#backgroundFilterBox { /*VISIBLE BACKGROUND FOR SIGN UP / IN */
+    height: 80%;
+    width: 80%;
+    background-image: url(../Img/nicolas-prieto-sMJaf08ugD0-unsplash.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30%;
+    z-index: 50;
+}
+
+
+#signInDiv
+,#signUpDiv {
+    padding: 0 2%;
+    line-height: 30px;
+}
+#signInDiv h4
+,#signUpDiv h4 {
+    font-size: 3rem;
+    padding-bottom: 1%;
+}
+#signUpOrIn h4, #signUpOrIn h5, #signUpOrIn p {
+    text-shadow: black 1px 1px 1px;
+}
+#inOrOutDiv button
+,#inOrOutDiv input{ /* Sign up / in buttons start */
+    font-size: 80%;
+    margin-top: 1%;
+    box-shadow: -2px 2px black, -1px 1px black;
+    border: 1px solid black;
+
+}
+
+#inOrOutDiv button:hover {
+    cursor: pointer;
+    background-color: blanchedalmond;
+}
+                                   /* Sign up / in buttons ends */
+
+/* TEMPERATURE */
+#tempDiv {
+    display: none;
+    margin-top: 45vh;
+    font-size: 7vw;
+}
+#tempF {
+    margin-left: 43vw;
+}
