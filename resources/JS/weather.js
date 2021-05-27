@@ -7,37 +7,37 @@ function getLocation() {
 	} else { 
 	  window.alert = "Geolocation is not supported by this browser.";
 	}
-  }
-  function error(err){
-	  if(err.code ==1 ) {
-		  let tempDenied=document.getElementById("tempF")
-		  console.log("Denied");
-		  tempDenied.innerHTML = "Please, approve geolocation and reload the page";
-		  tempDenied.style.fontSize = "2vw";
-	  }
-	  else if (err.code == 2 ){
-		  console.log("Position is unavailable")
-	  }
-  }
-  function showLocation(position) {
-	  var lat = position.coords.latitude;
-	  var lon = position.coords.longitude;
-	  fetch("https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=e5c0ad89eb574fc607f213c86ece74da&units=imperial")
+}
+function error(err){
+	if(err.code ==1 ) {
+		let tempDenied=document.getElementById("tempF")
+		console.log("Denied");
+		tempDenied.innerHTML = "Please, approve geolocation and reload the page";
+		tempDenied.style.fontSize = "2vw";
+	}
+	else if (err.code == 2 ){
+		console.log("Position is unavailable")
+	}
+}
+function showLocation(position) {
+	var lat = position.coords.latitude;
+	var lon = position.coords.longitude;
+	fetch("https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=e5c0ad89eb574fc607f213c86ece74da&units=imperial")
 	  .then(response => {
-		  return response.json();
-		  })
+		return response.json();
+		})
 	  .then (responseData => {
-		  weather = responseData.weather[0].description;
-		  temp = Math.floor(responseData.main.temp);
-		  document.getElementById("tempF").innerHTML = temp +" &#176F";
-		  bkgWeather();
+		weather = responseData.weather[0].description;
+		temp = Math.floor(responseData.main.temp);
+		document.getElementById("tempF").innerHTML = temp +" &#176F";
+		bkgWeather();
 	  })
 	  .catch(err => {
-		  console.error(err);
+		console.error(err);
 	  });
-  }
+}
 
-  window.addEventListener("load", getLocation);
+window.addEventListener("load", getLocation);
    							// WEATHER API END
 const body = document.getElementById("html")
 function bkgWeather() {
@@ -61,6 +61,6 @@ switch(weather) {
 	case "clear sky": body.style.backgroundImage = "url(./resources/images/clear.jpg)"
 	break;
 
-		}
+	}
 	
 }
