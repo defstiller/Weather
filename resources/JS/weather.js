@@ -39,23 +39,23 @@ function getLocation() {
 const body = document.getElementById("html")
 function bkgWeather() {
 switch(weather) {
-	case "broken clouds": body.style.backgroundImage = "url(./resources/Img/some-clouds.jpg)"
+	case "broken clouds": body.style.backgroundImage = "url(./resources/images/some-clouds.jpg)"
 	break;
-	case "moderate rain": body.style.backgroundImage = "url(./resources/Img/moderate-rain.jpg)"
+	case "moderate rain": body.style.backgroundImage = "url(./resources/images/moderate-rain.jpg)"
 	break;
-	case "light rain": body.style.backgroundImage = "url(./resources/Img/light-rain.jpg)"
+	case "light rain": body.style.backgroundImage = "url(./resources/images/light-rain.jpg)"
 	break;
-	case "heavy rain": body.style.backgroundImage = "url(./resources/Img/heavy-rain.jpg)"
+	case "heavy rain": body.style.backgroundImage = "url(./resources/images/heavy-rain.jpg)"
 	break;
-	case "scattered clouds": body.style.backgroundImage = "url(./resources/Img/some-clouds.jpg)"
+	case "scattered clouds": body.style.backgroundImage = "url(./resources/images/some-clouds.jpg)"
 	break;
-	case "overcast clouds": body.style.backgroundImage = "url(./resources/Img/heavy-clouds.jpg)"
+	case "overcast clouds": body.style.backgroundImage = "url(./resources/images/heavy-clouds.jpg)"
 	break;
-	case "light snow": body.style.backgroundImage = "url(./resources/Img/light-snow.jpg)"
+	case "light snow": body.style.backgroundImage = "url(./resources/images/light-snow.jpg)"
 	break;
-	case "heavy snow": body.style.backgroundImage = "url(./resources/Img/heavy-snow.jpg)"
+	case "heavy snow": body.style.backgroundImage = "url(./resources/images/heavy-snow.jpg)"
 	break;
-	case "clear sky": body.style.backgroundImage = "url(./resources/Img/clear.jpg)"
+	case "clear sky": body.style.backgroundImage = "url(./resources/images/clear.jpg)"
 	break;
 
 		}
