@@ -24,7 +24,6 @@ function getLocation() {
 		  return response.json();
 		  })
 	  .then (responseData => {
-		  console.log(responseData);
 		  weather = responseData.weather[0].description;
 		  temp = Math.floor(responseData.main.temp);
 		  document.getElementById("tempF").innerHTML = temp +" &#176F";
@@ -40,23 +39,23 @@ function getLocation() {
 const body = document.getElementById("html")
 function bkgWeather() {
 switch(weather) {
-	case "broken clouds": body.style.backgroundImage = "url(./resources/img/some-clouds.jpg)"
+	case "broken clouds": body.style.backgroundImage = "url(./resources/Img/some-clouds.jpg)"
 	break;
-	case "moderate rain": body.style.backgroundImage = "url(./resources/img/moderate-rain.jpg)"
+	case "moderate rain": body.style.backgroundImage = "url(./resources/Img/moderate-rain.jpg)"
 	break;
-	case "light rain": body.style.backgroundImage = "url(./resources/img/light-rain.jpg)"
+	case "light rain": body.style.backgroundImage = "url(./resources/Img/light-rain.jpg)"
 	break;
-	case "heavy rain": body.style.backgroundImage = "url(./resources/img/heavy-rain.jpg)"
+	case "heavy rain": body.style.backgroundImage = "url(./resources/Img/heavy-rain.jpg)"
 	break;
-	case "scattered clouds": body.style.backgroundImage = "url(./resources/img/some-clouds.jpg)"
+	case "scattered clouds": body.style.backgroundImage = "url(./resources/Img/some-clouds.jpg)"
 	break;
-	case "overcast clouds": body.style.backgroundImage = "url(./resources/img/heavy-clouds.jpg)"
+	case "overcast clouds": body.style.backgroundImage = "url(./resources/Img/heavy-clouds.jpg)"
 	break;
-	case "light snow": body.style.backgroundImage = "url(./resources/img/light-snow.jpg)"
+	case "light snow": body.style.backgroundImage = "url(./resources/Img/light-snow.jpg)"
 	break;
-	case "heavy snow": body.style.backgroundImage = "url(./resources/img/heavy-snow.jpg)"
+	case "heavy snow": body.style.backgroundImage = "url(./resources/Img/heavy-snow.jpg)"
 	break;
-	case "clear sky": body.style.backgroundImage = "url(./resources/img/clear.jpg)"
+	case "clear sky": body.style.backgroundImage = "url(./resources/Img/clear.jpg)"
 	break;
 
 		}
